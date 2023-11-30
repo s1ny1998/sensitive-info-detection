@@ -1,0 +1,7 @@
+image model to be trained..
+image model to be deployed..
+audio model to be trained (vishal)
+audio model to be deployed (vishal)
+streaming service (sanmitra)
+testing
+dataset collections (ram and deeksha) 

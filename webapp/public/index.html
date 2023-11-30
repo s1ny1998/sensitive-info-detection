@@ -1,0 +1,132 @@
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detection of Sensitive Data exposure in Images">
+    <title>Sensitivity Detecto</title>
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel=”stylesheet” href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- TensorFlow JS and Tesseract -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+  </head>
+<body>
+  <nav  class="navbar">
+    <div class="title"><a href="">Sensitivity Detecto</a></div>
+    <div class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+       
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li class="darkmode-button">
+          <input type="checkbox" class="checkbox" id="chk"/>
+          <label class="label" for="chk">
+            <i class="fas fa-sun"></i>	    
+            <i class="fas fa-moon"></i>
+            <div class="ball"></div>
+          </label>
+        </li>
+    </ul>
+  </div>
+  </nav>
+  
+  <div class="section">
+  <div class="big-text">Detection of sensitive data exposure in images</div>
+  <div class="steps">
+    <div class="single-step">
+      <img src="./assets/images//click.png" alt="Upload">
+      <div class="single-step-content">
+        <p class="main-title">Click</p>
+        <p>Take or choose a picture from your device</p>
+      </div>
+    </div>
+    <div class="single-step">
+      <img src="./assets/images/upload.png" alt="Upload">
+      <div class="single-step-content">
+      <p class="main-title">Upload</p>
+      <p>Upload the picture to SENSITIVITY DETECTO before uploading to cloud</p>
+      </div>
+    </div>
+    <div class="single-step">
+      <img src="./assets/images/detect.png" alt="Upload">
+      <div class="single-step-content">
+        <p class="main-title">Detect</p>
+        <p>Detect if your image contains sensitive information</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <button>Browse File</button>
+    <div class="drag-area">
+      <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+      <header>Upload your file here</header>
+      <input type="file" onchange="loadFile(event)" hidden>
+      <img src="#" id="output">
+    </div>
+  
+    <div id="progressStatus"> 
+      <div id="progressBar">1%</div> 
+    </div> 
+    <div class="classification non-sensitive main-title"><i class="fas fa-check-square"></i> Non-Sensitive</div>
+    <div class="classification sensitive main-title"><i class="fas fa-times-circle"></i> Sensitive</div>
+  </div>
+  </div>
+
+  <div id="about" class="section secondary">
+    <div>
+      <div class="big-text">
+        Is your data safe in the cloud?
+      </div>
+
+      <p>
+        In the current age of smart devices and smart phones, any image taken using these devices are immediately auto uploaded to the cloud (Google Photos, iCloud, etc) or internet (Social media sites like Facebook, Twitter, etc). And there is an archive of all the contents that is being uploaded to the internet in the Wayback Machine. So, one must be cautious about what is being uploaded to the internet.
+      </p>
+        
+      <p>
+        Loss, misuse, modification, or unauthorized access to sensitive information can adversely affect the privacy or welfare of an individual, trade secrets of a business or even the security and international relations of a nation depending on the level of sensitivity and nature of the information.
+      </p>
+    </div>
+    
+    <div>
+      <div class="main-title">
+        About the project
+      </div>
+      
+      <p>
+         We have designed a machine learning system that classifies the data in the images as <b>sensitive or non-sensitive</b>. On being classified as sensitive, we can warn the users that their image contains sensitive information (before uploading to the cloud).
+      </p>
+      <a href="https://github.com/DhilipSanjay/Detection-of-Sensitive-Data-Exposure-in-Images" target="_blank">
+      <button>
+        View Source Code on Github
+      </button>
+    </a>
+    </div>   
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">Hosted using</p>
+    <img src="./assets/images/firebase.svg" alt="Firebase icon">
+    <p class="footer-text">© Sensitivity Detecto - 2021</p>
+  </div>
+
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+
+<script src="./assets/script.js"></script>
+</body>
+</html>
